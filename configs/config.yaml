@@ -1,0 +1,20 @@
+# to write results
+output_dir: "./outputs"    # user can override with ENV OUTPUT_DIR
+
+# GEE query
+region_geojson: "./configs/roi_example.geojson" 
+start_date: "2024-01-01"
+end_date: "2024-12-31"
+cloud_max: 10
+
+# Tiling
+tile_size: 256
+bands: ["B02","B03","B04","B08"]  # Blue, Green, Red, NIR
+# Selected Sentinel-2 bands:
+# B02 (Blue, 10m), B03 (Green, 10m), B04 (Red, 10m): Core visible spectrum for true color composites.
+# B08 (Near Infrared, 10m): Critical for vegetation health indices (NDVI) and enhanced hazard detection, 
+#                           especially in differentiating vegetation cover from bare soil or landslide scars.
+
+# Destination for publishing outputs
+output_destination: "local"   # local | drive | kaggle
+kaggle_dataset_slug: "mohamadrahdan/gee-s2-multiclass"  # user overrides
