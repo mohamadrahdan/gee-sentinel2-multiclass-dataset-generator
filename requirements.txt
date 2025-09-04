@@ -1,0 +1,12 @@
+# Core
+earthengine-api
+numpy
+pillow
+pyyaml
+tqdm
+
+# Optional: only if working with shapefiles
+geopandas
+
+# Kaggle CLI for uploading/downloading datasets
+kaggle
