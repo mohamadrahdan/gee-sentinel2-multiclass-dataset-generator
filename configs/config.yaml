@@ -1,6 +1,15 @@
 # to write results
 output_dir: "./outputs"    # user can override with ENV OUTPUT_DIR
 
+# INPUTS
+boundary_path: "areakomeh.zip"   # relative to DATA_ROOT
+
+classes:
+  - { name: "landslide",        path: "landslides_merged.zip",       class_id: 1 }
+  - { name: "pseudo_landslide", path: "PseudoLandslides_merged.zip", class_id: 2 }
+  - { name: "non_landslide",    path: "NonLandslides_merged.zip",    class_id: 3 }
+
+
 # GEE query
 region_geojson: "./configs/roi_example.geojson" 
 start_date: "2024-01-01"
