@@ -27,3 +27,12 @@ bands: ["B02","B03","B04","B08"]  # Blue, Green, Red, NIR
 # Destination for publishing outputs
 output_destination: "local"   # local | drive | kaggle
 kaggle_dataset_slug: "mohamadrahdan/gee-s2-multiclass"  # user overrides
+
+# Export settings
+export:
+  drive_folder: "gee_s2_multiclass"
+  image_prefix: "img_"
+  mask_prefix: "mask_"
+  format: "GEO_TIFF"
+  scale: 10
+  max_tiles: 200
