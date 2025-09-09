@@ -75,3 +75,7 @@ def get_tile_download_url(image, tile_geom, bands=None, scale=10, fmt="PNG"):
     params = {"scale": scale, "region": tile_geom, "format": fmt}
     return clipped.getDownloadURL(params)
 
+
+def get_first_tile_url(mosaic_image, tiles_fc, bands=None, scale=10, fmt="PNG"):
+    first = ee.Feature(tiles_fc.first()).geometry()
+    return get_tile_download_url(mosaic_image, first, bands=bands, scale=scale, fmt=fmt)
