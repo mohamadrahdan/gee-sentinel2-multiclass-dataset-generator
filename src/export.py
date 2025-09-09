@@ -67,3 +67,11 @@ def export_tiles_to_drive(mosaic_image, label_mask_image, tiles_fc, cfg):
 
     print("Export tasks started. Track progress in the EE Tasks tab or Console.")
     return tasks  # statuses snapshot
+
+# download URL
+def get_tile_download_url(image, tile_geom, bands=None, scale=10, fmt="PNG"):
+    bands = bands or ["B02", "B03", "B04", "B08"]
+    clipped = image.select(bands).clip(tile_geom)
+    params = {"scale": scale, "region": tile_geom, "format": fmt}
+    return clipped.getDownloadURL(params)
+
