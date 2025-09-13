@@ -18,15 +18,6 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
 - **Configurable pipeline via configs/config.yaml**
 
 
-### Setup
-
-Clone the repo and install dependencies:
-git clone https://github.com/mohamadrahdan/gee-sentinel2-multiclass-dataset-generator.git
-cd gee-sentinel2-multiclass-dataset-generator
-
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-
 ## Setup
 
 - **Clone the repository**
