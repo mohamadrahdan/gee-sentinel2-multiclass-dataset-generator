@@ -30,3 +30,4 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
 
   pip install -r requirements.txt
 
+
