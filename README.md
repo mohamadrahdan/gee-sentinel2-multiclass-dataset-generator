@@ -21,6 +21,14 @@ Export tiles in batch to Google Drive (or Kaggle, optional)
 
 Modular, configurable via configs/config.yaml
 
+## Features
+
+- **Load AOI (boundary) and multiple class shapefiles (GeoJSON, SHP , or zipped SHP)**
+- **Fetch Sentinel-2 SR imagery with cloud filtering**
+- **Generate per-tile image chips and masks with class_id labels**
+- **Export tiles in batch to Google Drive (or Kaggle, optional)**
+- **Configurable pipeline via configs/config.yaml**
+
 
 ### Setup
 
