@@ -37,8 +37,27 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
   Do not put these inside the repo (they’re private).  
 
 - **Place them in a private folder**, for example:
-  D:/hazard-data/areakomeh.zip
-  D:/hazard-data/landslides_merged.zip
-  D:/hazard-data/PseudoLandslides_merged.zip
-  D:/hazard-data/NonLandslides_merged.zip
+  - `D:/hazard-data/areakomeh.zip`
+  - `D:/hazard-data/landslides_merged.zip`
+  - `D:/hazard-data/PseudoLandslides_merged.zip`
+  - `D:/hazard-data/NonLandslides_merged.zip`
 
+- **Set the environment variable `DATA_ROOT`** to that folder:
+
+  - Windows (PowerShell):
+    ```powershell
+    setx DATA_ROOT "D:\hazard-data"
+    ```
+
+  - Linux/macOS:
+    ```bash
+    export DATA_ROOT=/Users/me/hazard-data
+    ```
+
+  - Google Colab:
+    ```python
+    from google.colab import drive
+    drive.mount('/content/drive')
+    import os
+    os.environ["DATA_ROOT"] = "/content/drive/MyDrive/hazard-data"
+    ```
