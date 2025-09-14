@@ -93,3 +93,13 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
     scale: 10
     max_tiles: 200
 
+
+## Run the Pipeline
+
+- **Local usage**
+
+  > Make sure to activate your virtual environment and set `DATA_ROOT` first.
+
+  ```bash
+  jupyter notebook notebooks/gee-s2-multiclass-dataset-generator.ipynb
+
