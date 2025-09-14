@@ -31,3 +31,14 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
   pip install -r requirements.txt
 
 
+## Private Inputs (AOI + Classes)
+
+- **Provide your own shapefiles** for the boundary and hazard classes.  
+  Do not put these inside the repo (they’re private).  
+
+- **Place them in a private folder**, for example:
+  D:/hazard-data/areakomeh.zip
+  D:/hazard-data/landslides_merged.zip
+  D:/hazard-data/PseudoLandslides_merged.zip
+  D:/hazard-data/NonLandslides_merged.zip
+
