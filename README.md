@@ -61,3 +61,35 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
     import os
     os.environ["DATA_ROOT"] = "/content/drive/MyDrive/hazard-data"
     ```
+
+
+## Config File (configs/config.yaml)
+
+- **Example configuration:**
+  ```yaml
+  output_dir: "./outputs"
+
+  boundary_path: "areakomeh.zip"
+  classes:
+    - { name: "landslide",        path: "landslides_merged.zip",       class_id: 1 }
+    - { name: "pseudo_landslide", path: "PseudoLandslides_merged.zip", class_id: 2 }
+    - { name: "non_landslide",    path: "NonLandslides_merged.zip",    class_id: 3 }
+
+  start_date: "2024-01-01"
+  end_date: "2024-12-31"
+  cloud_max: 10
+
+  tile_size: 256
+  bands: ["B02","B03","B04","B08"]
+
+  output_destination: "local"   # local | drive | kaggle
+  kaggle_dataset_slug: "mohamadrahdan/gee-s2-multiclass"
+
+  export:
+    drive_folder: "gee_s2_multiclass"
+    image_prefix: "img_"
+    mask_prefix: "mask_"
+    format: "GEO_TIFF"
+    scale: 10
+    max_tiles: 200
+
