@@ -103,3 +103,9 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
   ```bash
   jupyter notebook notebooks/gee-s2-multiclass-dataset-generator.ipynb
 
+
+Google Colab
+
+Click the "Open in Colab" badge above.
+
+Mount your Drive, set DATA_ROOT, and run the cells.
