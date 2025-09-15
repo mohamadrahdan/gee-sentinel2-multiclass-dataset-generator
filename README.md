@@ -123,18 +123,22 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
 
 ## Publish to Kaggle(Optional)
 
+**After export, you can push the results to Kaggle:**
 ```bash
-# After export, you can push the results to Kaggle:
 python tools/upload_to_kaggle.py \
   --slug yourname/gee-s2-multiclass \
   --dir ./outputs \
   --init --public
+  ```
 
-# For subsequent versions:
+**For subsequent versions:**
+```bash
 python tools/upload_to_kaggle.py \
   --slug yourname/gee-s2-multiclass \
   --dir ./outputs \
   --message "update v0.2"
+```
+
 
 
 
