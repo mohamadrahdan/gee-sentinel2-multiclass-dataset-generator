@@ -120,3 +120,21 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
   - Files are saved in your Google Drive folder: `gee_s2_multiclass`  
   - Filenames follow this format: `img_00001.tif`, `mask_00001.tif`, etc.
 
+
+## Publish to Kaggle(Optional)
+
+```bash
+# After export, you can push the results to Kaggle:
+python tools/upload_to_kaggle.py \
+  --slug yourname/gee-s2-multiclass \
+  --dir ./outputs \
+  --init --public
+
+# For subsequent versions:
+python tools/upload_to_kaggle.py \
+  --slug yourname/gee-s2-multiclass \
+  --dir ./outputs \
+  --message "update v0.2"
+
+
+
