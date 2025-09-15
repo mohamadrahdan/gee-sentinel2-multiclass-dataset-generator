@@ -123,7 +123,7 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
 
 ## Publish to Kaggle(Optional)
 
-**After export, you can push the results to Kaggle:**
+- **After export, you can push the results to Kaggle:**
 ```bash
 python tools/upload_to_kaggle.py \
   --slug yourname/gee-s2-multiclass \
@@ -131,13 +131,37 @@ python tools/upload_to_kaggle.py \
   --init --public
   ```
 
-**For subsequent versions:**
+- **For subsequent versions:**
 ```bash
 python tools/upload_to_kaggle.py \
   --slug yourname/gee-s2-multiclass \
   --dir ./outputs \
   --message "update v0.2"
 ```
+
+## Why these bands? (B02, B03, B04, B08)
+
+- **B02 / B03 / B04 (Blue, Green, Red – 10m):** true-color composites, quality control (QC)  
+- **B08 (Near Infrared – 10m):** vegetation index (NDVI), critical for hazard mapping  
+
+---
+
+## FAQ
+
+- **Q: Where do I put my shapefiles?**  
+  A: In a private folder outside Git. Point to it via `DATA_ROOT`.
+- **Q: Can I add more classes?**  
+  A: Yes, just add them under `classes` in `config.yaml` with a unique `class_id`.
+- **Q: How do I avoid thousands of tasks?**  
+  A: Use `max_tiles` in `config.yaml` and export in batches.
+- **Q: Do outputs go to GitHub?**  
+  A: No, `outputs/` and `data/` are ignored via `.gitignore`.
+
+---
+
+## License
+
+MIT License © 2025 Mohamad Rahdan
 
 
 
