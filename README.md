@@ -110,3 +110,13 @@ Generate tiled Sentinel-2 image chips and masks for multiclass hazard detection 
 
   > Mount your Drive, set DATA_ROOT, and run the cells.
 
+## Outputs
+
+- **Quick Preview**  
+  The notebook prints download URLs for one tile + mask.
+
+- **Batch Export**  
+  - Tasks are created in Earth Engine.  
+  - Files are saved in your Google Drive folder: `gee_s2_multiclass`  
+  - Filenames follow this format: `img_00001.tif`, `mask_00001.tif`, etc.
+
