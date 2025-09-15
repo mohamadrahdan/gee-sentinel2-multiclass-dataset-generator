@@ -144,8 +144,6 @@ python tools/upload_to_kaggle.py \
 - **B02 / B03 / B04 (Blue, Green, Red – 10m):** true-color composites, quality control (QC)  
 - **B08 (Near Infrared – 10m):** vegetation index (NDVI), critical for hazard mapping  
 
----
-
 ## FAQ
 
 - **Q: Where do I put my shapefiles?**  
@@ -156,8 +154,6 @@ python tools/upload_to_kaggle.py \
   A: Use `max_tiles` in `config.yaml` and export in batches.
 - **Q: Do outputs go to GitHub?**  
   A: No, `outputs/` and `data/` are ignored via `.gitignore`.
-
----
 
 ## License
 
