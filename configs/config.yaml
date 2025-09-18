@@ -2,7 +2,9 @@
 output_dir: "./outputs"    # user can override with ENV OUTPUT_DIR
 
 # INPUTS
-boundary_path: "areakomeh.zip"   # relative to DATA_ROOT
+#boundary_path: "areakomeh.zip"   # relative to DATA_ROOT
+region_geojson: "./configs/roi_example.geojson"
+
 
 classes:
   - { name: "landslide",        path: "landslides_merged.zip",       class_id: 1 }
